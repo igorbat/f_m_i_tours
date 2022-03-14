@@ -1,5 +1,6 @@
-from abaka_cls import *
+from abaka.abaka_cls import *
 import unittest
+
 
 class TestSolve(unittest.TestCase):
     def get_player1(self):
