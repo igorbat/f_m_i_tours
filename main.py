@@ -1,15 +1,12 @@
-import os
-
 import discord
-import random
 from secret import TOKEN
 from discord.ext import commands
-from tasks_5_strong import *
-from tasks_5_weak import *
-from tasks_8_strong import *
-from tasks_8_weak import *
+from abaka.data.tasks_5_strong import *
+from abaka.data.tasks_5_weak import *
+from abaka.data.tasks_8_strong import *
+from abaka.data.tasks_8_weak import *
 
-from abaka_cls import *
+from abaka.abaka_cls import *
 
 
 client = discord.Client()
