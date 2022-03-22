@@ -144,11 +144,10 @@ class StateMachine:
     def add_tour(self, tour_name, game):
         self.tours[tour_name] = game
 
-    def register_player(self, player_id, school, level):
+    def register_player(self, player_id, team_name):
         if player_id in self.players:
             return "У вас уже есть команда: {}".format(self.players[player_id].team_name)
 
-        team_name = school + "_" + level
         if team_name not in self.teams:
             self.teams[team_name] = 1
             idd = 1

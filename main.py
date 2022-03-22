@@ -47,16 +47,16 @@ game_weak_8 = \
 state_machine.add_tour("novice_8", game_weak_8)
 
 
-@bot.command(name='register', help='зарегистрировать команду: школа, класс')
+@bot.command(name='register', help='зарегистрировать команду: школа, класс или целиком название')
 async def register(ctx):
     print(ctx.author.id, ctx.author.name, ctx.message.content)
-    parts = str(ctx.message.content).strip().split(maxsplit=2)
-    if len(parts) < 3:
+    parts = str(ctx.message.content).strip().split(maxsplit=1)
+    if len(parts) < 2:
         msg = "Недостаточно аргументов. Нужно написать школу класс"
         print(msg)
         await ctx.send(msg)
     else:
-        team_name = state_machine.register_player(ctx.author.id, parts[1], parts[2])
+        team_name = state_machine.register_player(ctx.author.id, parts[1])
         msg = "Ваша команда: {}".format(team_name)
         print(msg)
         await ctx.send(msg)
