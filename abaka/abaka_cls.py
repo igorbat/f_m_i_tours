@@ -203,7 +203,7 @@ class StateMachine:
             return (False, "Нет такого игрока")
         if self.players[player_id].current_tour is None:
             return (False, "Вы нигде не играете")
-        return (True, self.tours[self.players[player_id].current_tour].sent_tasks())
+        return (self.players[player_id].sent_tasks())
 
     def points(self, player_id):
         if player_id not in self.players:

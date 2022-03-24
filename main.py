@@ -104,8 +104,8 @@ async def tasks_link(ctx):
     await ctx.send(msg)
 
 
-@bot.command(name='sent_task', help='Какие задания вы отправили')
-async def sent_task(ctx):
+@bot.command(name='sent_tasks', help='Какие задания вы отправили')
+async def sent_tasks(ctx):
     # print(ctx.author.id, ctx.author.name, ctx.message.content)
     ok, msg = state_machine.sent_task(ctx.author.id)
     # print(msg)
