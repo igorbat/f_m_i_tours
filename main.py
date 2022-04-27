@@ -2,6 +2,7 @@ import discord
 from secret import TOKEN
 from discord.ext import commands
 from abaka.data.tasks_5_strong import *
+from abaka.data.tasks_5_weak import *
 
 from abaka.abaka_cls import *
 
@@ -19,15 +20,15 @@ state_machine = StateMachine()
 
 game_strong_5 = \
     GameAbaka("pro_5",
-              "https://drive.google.com/file/d/1iUoQsds4sFFd8eKD3LuC6AoOyvR5VHHK/view?usp=sharing",
+              "",
               TASKS_5_STRONG)
 state_machine.add_tour("pro_5", game_strong_5)
 
-# game_weak_5 = \
-#     GameAbaka("novice_5",
-#               "https://drive.google.com/file/d/1eXZjFVYTt9Iu9EQbZVulwQ4mYaHzUgeR/view?usp=sharing",
-#               TASKS_5_WEAK)
-# state_machine.add_tour("novice_5", game_weak_5)
+game_weak_5 = \
+    GameAbaka("novice_5",
+              "",
+              TASKS_5_WEAK)
+state_machine.add_tour("novice_5", game_weak_5)
 
 
 # game_strong_8 = \
