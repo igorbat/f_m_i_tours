@@ -20,13 +20,13 @@ state_machine = StateMachine()
 
 game_strong_5 = \
     GameAbaka("pro_5",
-              "",
+              "https://drive.google.com/file/d/1gWh0YP3g1w_kiETSvqhzp7lwSZqDRLYi/view?usp=sharing",
               TASKS_5_STRONG)
 state_machine.add_tour("pro_5", game_strong_5)
 
 game_weak_5 = \
     GameAbaka("novice_5",
-              "",
+              "https://drive.google.com/file/d/1mpndmVELhI_0PXsDzEgmI7Kz7ex_FHx_/view?usp=sharing",
               TASKS_5_WEAK)
 state_machine.add_tour("novice_5", game_weak_5)
 
